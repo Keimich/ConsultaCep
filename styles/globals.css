@@ -1,0 +1,127 @@
+/*reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Azeret Mono', monospace;
+}
+
+/*var*/
+:root {
+    --main-color: hsl(101, 100%, 38%);
+    --alt-color: hsl(215, 32%, 30%);
+}
+
+/*NavBar*/
+
+div.nav{
+    position: static;
+    box-shadow:0px 1px 1px hsl(0, 2%, 80%);
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+div.logo{
+    margin: 1rem;
+}
+
+div.logo h2 span {
+    color: var(--main-color);
+}
+
+/*Container*/
+
+div.container{
+    height: 60vh;
+    margin: 2rem;
+    display: grid;
+    align-content: center;
+}
+
+/*Section Infos*/
+section#infos{
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+}
+
+section#infos h1>span{
+    color: var(--main-color);
+}
+
+/*Section Input*/
+section#input{
+    display: grid;
+    gap: 1rem;
+    margin: 1rem;
+    justify-content: center;
+}
+
+section#input>div#input_cep {
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid rgb(195,195,195);
+    border-radius: 5px;
+    height: 2.2rem;
+}
+
+section#input>div#input_cep>input{
+    border: none;
+    width: 100%;
+}
+
+input:focus-visible {
+    outline-offset: 0;
+    outline: none;
+}
+
+section#input button{
+    height: 2.2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    color: whitesmoke;
+    cursor: pointer;
+    box-shadow: 0 4px 14px 0 hsl(212, 15%, 58%);
+}
+
+
+
+/*Section Result*/
+section#result{
+    align-content: center;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1rem;
+    gap: 0.2rem;
+}
+
+section#result p{
+    color: var(--main-color);
+}
+
+section#result h1#error{
+    display: none;
+}
+
+section#result div#result{
+    display: none;
+    gap: 0.4rem;
+}
+
+section#result span{
+    color: black;
+}
+
+
+
+/*se a largura for menor 375px ou menor*/
+@media screen and (max-width: 375px) {
+    h1{
+        font-size: 1.4rem;
+    }
+  }
