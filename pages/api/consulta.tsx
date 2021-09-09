@@ -4,7 +4,7 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 
-export default async (req: NextApiRequest, res: NextApiResponse)=>{
+    const consulta = async (req: NextApiRequest, res: NextApiResponse)=>{
     if(req.method !== 'POST'){
         return res.status(405)
     }else{
@@ -21,3 +21,5 @@ export default async (req: NextApiRequest, res: NextApiResponse)=>{
         res.json(saveCep)
     }
 }
+
+export default consulta

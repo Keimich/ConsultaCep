@@ -16,7 +16,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _prisma_client__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_prisma_client__WEBPACK_IMPORTED_MODULE_0__);
 
 const prisma = new _prisma_client__WEBPACK_IMPORTED_MODULE_0__.PrismaClient();
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (async (req, res) => {
+
+const consulta = async (req, res) => {
   if (req.method !== 'POST') {
     return res.status(405);
   } else {
@@ -30,7 +31,9 @@ const prisma = new _prisma_client__WEBPACK_IMPORTED_MODULE_0__.PrismaClient();
     });
     res.json(saveCep);
   }
-});
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (consulta);
 
 /***/ }),
 
