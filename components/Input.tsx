@@ -39,8 +39,8 @@ const getCep = () => {
     .then(result => {
 
         const resultJSON = JSON.parse(result);
-        console.log(resultJSON)
-        saveCep(resultJSON);
+        
+        saveCep(JSON.stringify(resultJSON));
 
         if(resultJSON.erro = true && !resultJSON.logradouro) {
 

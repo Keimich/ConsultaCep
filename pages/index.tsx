@@ -11,7 +11,7 @@ import { GetServerSideProps } from 'next'
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const prisma = new PrismaClient();
-  const result = await prisma.queries.count({where:{res_api_error:0}})
+  const result = await prisma.queries.count()
 
   return { props: {result} }
 }

@@ -8,8 +8,7 @@ datasource db {
 }
 
 model queries {
-  id            Int    @id @default(autoincrement())
-  cep           String
-  res_api       String
-  res_api_error Int
+  id      Int    @id @default(autoincrement())
+  cep     String
+  res_api String
 }
