@@ -219,9 +219,6 @@ const Home = result => {
         rel: "preconnect",
         href: "https://fonts.gstatic.com"
       }), /*#__PURE__*/jsx_runtime_.jsx("link", {
-        href: "https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100&display=swap",
-        rel: "stylesheet"
-      }), /*#__PURE__*/jsx_runtime_.jsx("link", {
         href: "https://fonts.googleapis.com/icon?family=Material+Icons",
         rel: "stylesheet"
       })]
