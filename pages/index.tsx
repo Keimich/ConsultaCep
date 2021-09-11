@@ -1,20 +1,18 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import React from "react" 
+import React from "react"
+import { GetServerSideProps } from 'next' 
+import prisma from '../prisma/client'
 React.useLayoutEffect = React.useEffect 
 import { NavBar } from '../components/NavBar'
 import { Infos } from '../components/Infos'
 import { Input } from '../components/Input'
 import { Result } from '../components/Result'
-//import { PrismaClient } from '@prisma/client'
-import { GetServerSideProps } from 'next'
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   //const prisma = new PrismaClient();
-  //const result = await prisma.queries.count()
-  const data = require('../prisma/dev_db.json');
-  const result = data.queries.length
-
+  const result = await prisma.queries.count()
+  
   return { props: {result} }
 }
 
