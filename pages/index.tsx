@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Script from 'next/script'
 import React from "react"
 import { GetServerSideProps } from 'next' 
 import prisma from '../prisma/client'
@@ -37,7 +38,7 @@ const Home: NextPage = (result) => {
         </div>
       </main>
       <footer>
-      <script src="global.js"></script>
+      <Script src="global.js"></Script>
       </footer>
     </>
   )
