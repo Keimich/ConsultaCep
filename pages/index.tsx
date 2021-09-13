@@ -37,7 +37,7 @@ const Home: NextPage = (result) => {
         </div>
       </main>
       <footer>
-
+      <script src="global.js"></script>
       </footer>
     </>
   )

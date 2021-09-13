@@ -19,13 +19,13 @@ const getCep = () => {
         uf: (document.getElementById('uf') as HTMLElement)
     }
    let cep = (document.getElementById('cep') as HTMLInputElement).value
-
-   if(cep === ''){
+    
+   if(cep === `` || cep === '_____-___'){
 
     infoFields.infosField.style.display = "none";
     infoFields.error.style.display = "block";
     infoFields.error.innerText = 'Favor digite um CEP';
-   } if(cep.replace('-','').replaceAll('_','').length < 8) {
+   } else if (cep.replace('-','').replaceAll('_','').length < 8) {
 
     infoFields.infosField.style.display = "none";
     infoFields.error.style.display = "block";
@@ -46,7 +46,7 @@ const getCep = () => {
 
         infoFields.infosField.style.display = "none";
         infoFields.error.style.display = "block";
-        infoFields.error.innerText = 'CEP nao encontrado :(';
+        infoFields.error.innerText = 'CEP não encontrado :(';
         } else {
 
         infoFields.error.style.display = "none";
